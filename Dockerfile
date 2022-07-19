@@ -1,4 +1,4 @@
 FROM tomcat
-ADD target/TestWebApp.war /usr/local/tomcat/webapps/
+ADD target/order-management.jar /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD ["catalina.sh","run"]

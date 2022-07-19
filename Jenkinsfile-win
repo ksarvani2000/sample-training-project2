@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("checkout"){
             steps{
-                git "https://github.com/sbtalk71/TestWebApp.git"
+                git "https://github.com/ksarvani2000/sample-training-project2.git"
             }
         }
         stage("compile"){
@@ -20,7 +20,7 @@ pipeline{
         
         stage("docker_build"){
             steps{
-            bat "docker build -t arunasarvani/myapp:$BUILD_NUMBER ."
+            bat "docker build -t arunasarvani/myorderapp:$BUILD_NUMBER ."
             }
         }
       
