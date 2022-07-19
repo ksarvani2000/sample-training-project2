@@ -1,0 +1,19 @@
+server:
+ port: 8380
+
+spring:
+  application:
+    name: order-service
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url: 
+      defaultZone: http://127.0.0.1:8761/eureka/
