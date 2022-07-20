@@ -8,19 +8,19 @@ pipeline{
         }
         stage("compile"){
             steps{
-            bat "mvn clean compile"
+            sh "mvn clean compile"
             }
         }
         
          stage("package"){
             steps{
-            bat "mvn package"
+            sh "mvn package"
             }
         }
         
         stage("docker_build"){
             steps{
-            bat "docker build -t arunasarvani/myorderapp:$BUILD_NUMBER ."
+            sh "docker build -t arunasarvani/myorderapp:$BUILD_NUMBER ."
             }
         }
       
